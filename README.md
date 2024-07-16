@@ -21,6 +21,18 @@ i = MIDIData.loadFromSMF('./hoge.mid')
 i.getTitle()
 i.getFirstTrack().getFirstEvent().getKind()
 ```
+MIDIData/MIDITrackクラスはイテラブルな為、for文を利用出来ます。  
+利用した全てのインスタンスが正しく破棄される為に、  
+恐らくこのように利用するのが最も美しいと思います。
+```python
+try:
+	i = MIDIData.loadFromSMF(filepath)
+	for t in i:
+		for e in t:
+			# ここに色々処理を書く
+finally:
+	del i
+```
 このクラスは内部でpMIDIData/pMIDITrack/pMIDIEvent等の変数でポインタを格納している為、  
 (あまりメリットはありませんが)前述の関数とも相互に利用が可能です。
 ```python
