@@ -19,6 +19,7 @@ Pythonの命名規則に従いメソッドの1文字目は小文字に変更さ�
 from MIDIData import *
 i = MIDIData.loadFromSMF('./hoge.mid')
 i.getTitle()
+i.getFirstTrack().getFirstEvent().getKind()
 ```
 このクラスは内部でpMIDIData/pMIDITrack/pMIDIEvent等の変数でポインタを格納している為、  
 (あまりメリットはありませんが)前述の関数とも相互に利用が可能です。
@@ -32,6 +33,7 @@ MIDIData_GetTitle(i.pMIDIData)
 from MIDIData import *
 i = MIDIData.loadFromSMF('./hoge.mid')
 i.title = 'hello MIDIData'
+i.getFirstTrack().getFirstEvent().kind
 ```
 現在利用可能なプロパティは以下になります。
 | Property					| Read	| Write	|
