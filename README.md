@@ -1,5 +1,5 @@
 # MIDIData.py
-use [MIDIDataLibrary](https://openmidiproject.osdn.jp/MIDIDataLibrary.html) in Python3
+use [MIDIDataLibrary](https://openmidiproject.opal.ne.jp/MIDIDataLibrary.html) in Python3
 
 ※非推奨関数などは意図的にコメントアウトしています。  
 
