@@ -27,8 +27,8 @@ MIDIData/MIDITrackクラスはイテラブルな為、for文を利用出来ま�
 ```python
 try:
 	i = MIDIData.loadFromSMF(filepath)
-	for t in i:
-		for e in t:
+	for t in i: # 各トラックを取得
+		for e in t: # 各イベントを取得
 			# ここに色々処理を書く
 finally:
 	del i
