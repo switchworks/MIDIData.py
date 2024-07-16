@@ -13,7 +13,7 @@ MIDIData_GetTitle(p)
 # クラス
 MIDIData/MIDITrack/MIDIEventクラスを利用出来ます。  
 loadFrom系クラスメソッド等からインスタンスを作成出来ます。  
-Pythonの命名規則に従いメソッドの1文字目は小文字に変更されています。
+Pythonの命名規則に従いメソッドの1文字目は小文字に変更されています。  
 また「自身のポインタを第一引数で渡す関数」に関しては第一引数を省略しています。
 ```python
 from MIDIData import *
