@@ -1254,7 +1254,8 @@ class MIDIData():
 			return pMIDITrack
 		else:
 			if self.index == self.getLastTrack().pMIDITrack :
-				raise StopIteration
+				self.index = -1
+				raise StopIteration()
 			pMIDITrack = self.getMIDITrack(self.index)
 			pMIDITrack = pMIDITrack.getNextTrack()
 			self.index = pMIDITrack.pMIDITrack
@@ -1515,7 +1516,7 @@ class MIDIData():
 		def __del__(self):
 			for instMIDIEvent in self.instMIDIEvents:
 				del instMIDIEvent
-			MIDIData_Delete(self.pMIDITrack)
+			self.parent.instMIDITracks.remove(self)
 
 		def __iter__(self):
 			return self
@@ -1527,7 +1528,8 @@ class MIDIData():
 				return pMIDIEvent
 			else:
 				if self.index == self.getLastEvent().pMIDIEvent:
-					raise StopIteration
+					self.index = -1
+					raise StopIteration()
 				pMIDIEvent = self.getMIDIEvent(self.index)
 				pMIDIEvent = pMIDIEvent.getNextEvent()
 				self.index = pMIDIEvent.pMIDIEvent
@@ -1666,6 +1668,7 @@ class MIDIData():
 			return MIDITrack_GetXFVersion(self.pMIDITrack)
 
 		def delete(self):
+			MIDITrack_Delete(self.pMIDITrack)
 			del self
 
 		def create(self):
@@ -1944,7 +1947,7 @@ class MIDIData():
 				self.index = -1
 
 			def __del__(self):
-				MIDIEvent_Delete(self.pMIDIEvent)
+				self.parent.instMIDIEvents.remove(self)
 
 			def getFirstCombinedEvent(self):
 				return self.parent.getMIDIEvent(MIDIEvent_GetFirstCombinedEvent(self.pMIDIEvent))
@@ -1964,6 +1967,7 @@ class MIDIData():
 				del self
 
 			def delete(self):
+				MIDIEvent_Delete(self.pMIDIEvent)
 				del self
 
 		#	def create(self):
