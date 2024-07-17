@@ -2102,111 +2102,147 @@ class MIDIData():
 
 		#	def createSysExEvent(self):
 
+			@property
 			def isMetaEvent(self):
 				return MIDIEvent_IsMetaEvent(self.pMIDIEvent)
 
+			@property
 			def isSequenceNumber(self):
 				return MIDIEvent_IsSequenceNumber(self.pMIDIEvent)
 
+			@property
 			def isTextEvent(self):
 				return MIDIEvent_IsTextEvent(self.pMIDIEvent)
 
+			@property
 			def isCopyrightNotice(self):
 				return MIDIEvent_IsCopyrightNotice(self.pMIDIEvent)
 
+			@property
 			def isTrackName(self):
 				return MIDIEvent_IsTrackName(self.pMIDIEvent)
 
+			@property
 			def isInstrumentName(self):
 				return MIDIEvent_IsInstrumentName(self.pMIDIEvent)
 
+			@property
 			def isLyric(self):
 				return MIDIEvent_IsLyric(self.pMIDIEvent)
 
+			@property
 			def isMarker(self):
 				return MIDIEvent_IsMarker(self.pMIDIEvent)
 
+			@property
 			def isCuePoint(self):
 				return MIDIEvent_IsCuePoint(self.pMIDIEvent)
 
+			@property
 			def isProgramName(self):
 				return MIDIEvent_IsProgramName(self.pMIDIEvent)
 
+			@property
 			def isDeviceName(self):
 				return MIDIEvent_IsDeviceName(self.pMIDIEvent)
 
+			@property
 			def isChannelPrefix(self):
 				return MIDIEvent_IsChannelPrefix(self.pMIDIEvent)
 
+			@property
 			def isPortPrefix(self):
 				return MIDIEvent_IsPortPrefix(self.pMIDIEvent)
 
+			@property
 			def isEndofTrack(self):
 				return MIDIEvent_IsEndofTrack(self.pMIDIEvent)
 
+			@property
 			def isTempo(self):
 				return MIDIEvent_IsTempo(self.pMIDIEvent)
 
+			@property
 			def isSMPTEOffset(self):
 				return MIDIEvent_IsSMPTEOffset(self.pMIDIEvent)
 
+			@property
 			def isTimeSignature(self):
 				return MIDIEvent_IsTimeSignature(self.pMIDIEvent)
 
+			@property
 			def isKeySignature(self):
 				return MIDIEvent_IsKeySignature(self.pMIDIEvent)
 
+			@property
 			def isSequencerSpecific(self):
 				return MIDIEvent_IsSequencerSpecific(self.pMIDIEvent)
 
+			@property
 			def isMIDIEvent(self):
 				return MIDIEvent_IsMIDIEvent(self.pMIDIEvent)
 
+			@property
 			def isNoteOn(self):
 				return MIDIEvent_IsNoteOn(self.pMIDIEvent)
 
+			@property
 			def isNoteOff(self):
 				return MIDIEvent_IsNoteOff(self.pMIDIEvent)
 
+			@property
 			def isNote(self):
 				return MIDIEvent_IsNote(self.pMIDIEvent)
 
+			@property
 			def isNoteOnNoteOff(self):
 				return MIDIEvent_IsNoteOnNoteOff(self.pMIDIEvent)
 
+			@property
 			def isNoteOnNoteOn0(self):
 				return MIDIEvent_IsNoteOnNoteOn0(self.pMIDIEvent)
 
+			@property
 			def isKeyAftertouch(self):
 				return MIDIEvent_IsKeyAftertouch(self.pMIDIEvent)
 
+			@property
 			def isControlChange(self):
 				return MIDIEvent_IsControlChange(self.pMIDIEvent)
 
+			@property
 			def isRPNChange(self):
 				return MIDIEvent_IsRPNChange(self.pMIDIEvent)
 
+			@property
 			def isNRPNChange(self):
 				return MIDIEvent_IsNRPNChange(self.pMIDIEvent)
 
+			@property
 			def isProgramChange(self):
 				return MIDIEvent_IsProgramChange(self.pMIDIEvent)
 
+			@property
 			def isPatchChange(self):
 				return MIDIEvent_IsPatchChange(self.pMIDIEvent)
 
+			@property
 			def isChannelAftertouch(self):
 				return MIDIEvent_IsChannelAftertouch(self.pMIDIEvent)
 
+			@property
 			def isPitchBend(self):
 				return MIDIEvent_IsPitchBend(self.pMIDIEvent)
 
+			@property
 			def isSysExEvent(self):
 				return MIDIEvent_IsSysExEvent(self.pMIDIEvent)
 
+			@property
 			def isFloating(self):
 				return MIDIEvent_IsFloating(self.pMIDIEvent)
 
+			@property
 			def isCombined(self):
 				return MIDIEvent_IsCombined(self.pMIDIEvent)
 
