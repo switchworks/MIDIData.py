@@ -33,7 +33,7 @@ try:
 finally:
 	del i
 ```
-これらのクラスは内部でpMIDIData/pMIDITrack/pMIDIEvent等の変数でポインタを格納している為、  
+これらのインスタンスは内部でpMIDIData/pMIDITrack/pMIDIEvent等の変数でポインタを格納している為、  
 (あまりメリットはありませんが)前述の関数とも相互に利用が可能です。
 ```python
 from MIDIData import *
