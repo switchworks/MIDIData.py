@@ -40,7 +40,8 @@ from MIDIData import *
 i = MIDIData.loadFromSMF('./hoge.mid')
 MIDIData_GetTitle(i.pMIDIData)
 ```
-また一部メソッドはプロパティとしても利用可能です。
+また一部メソッドはプロパティとしても利用可能です。  
+※MIDIEventのIs系のようなbool値を返す物はプロパティに寄せました。
 ```python
 from MIDIData import *
 i = MIDIData.loadFromSMF('./hoge.mid')
@@ -88,3 +89,39 @@ i.getFirstTrack().getFirstEvent().kind
 | MIDIEvent.dataEntryMSB	| O		| O		|
 | MIDIEvent.number			| O		| O		|
 | MIDIEvent.value			| O		| O		|
+| MIDIEvent.isMetaEvent			| O		| X		|
+| MIDIEvent.isSequenceNumber			| O		| X		|
+| MIDIEvent.isTextEvent			| O		| X		|
+| MIDIEvent.isCopyrightNotice			| O		| X		|
+| MIDIEvent.isTrackName			| O		| X		|
+| MIDIEvent.isInstrumentName			| O		| X		|
+| MIDIEvent.isLyric			| O		| X		|
+| MIDIEvent.isMarker			| O		| X		|
+| MIDIEvent.isCuePoint			| O		| X		|
+| MIDIEvent.isProgramName			| O		| X		|
+| MIDIEvent.isDeviceName			| O		| X		|
+| MIDIEvent.isChannelPrefix			| O		| X		|
+| MIDIEvent.isPortPrefix			| O		| X		|
+| MIDIEvent.isEndofTrack			| O		| X		|
+| MIDIEvent.isTempo			| O		| X		|
+| MIDIEvent.isSMPTEOffset			| O		| X		|
+| MIDIEvent.isTimeSignature			| O		| X		|
+| MIDIEvent.isKeySignature			| O		| X		|
+| MIDIEvent.isSequencerSpecific			| O		| X		|
+| MIDIEvent.isMIDIEvent			| O		| X		|
+| MIDIEvent.isNoteOn			| O		| X		|
+| MIDIEvent.isNoteOff			| O		| X		|
+| MIDIEvent.isNote			| O		| X		|
+| MIDIEvent.isNoteOnNoteOff			| O		| X		|
+| MIDIEvent.isNoteOnNoteOn0			| O		| X		|
+| MIDIEvent.isKeyAftertouch			| O		| X		|
+| MIDIEvent.isControlChange			| O		| X		|
+| MIDIEvent.isRPNChange			| O		| X		|
+| MIDIEvent.isNRPNChange			| O		| X		|
+| MIDIEvent.isProgramChange			| O		| X		|
+| MIDIEvent.isPatchChange			| O		| X		|
+| MIDIEvent.isChannelAftertouch			| O		| X		|
+| MIDIEvent.isPitchBend			| O		| X		|
+| MIDIEvent.isSysExEvent			| O		| X		|
+| MIDIEvent.isFloating			| O		| X		|
+| MIDIEvent.isCombined			| O		| X		|
