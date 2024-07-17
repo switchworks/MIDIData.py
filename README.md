@@ -51,6 +51,7 @@ i.getFirstTrack().getFirstEvent().kind
 | Property					| Read	| Write	|
 |:--------------------------|:-----:|:-----:|
 | MIDIData.title			| O		| O     |
+| MIDIData.format			| O		| O     |
 | MIDIData.timeBase			| O		| O     |
 | MIDIData.timeMode			| O		| X     |
 | MIDIData.timeResolution	| O		| X		|
