@@ -1442,6 +1442,14 @@ class MIDIData():
 		return self.setTitle(pszText)
 
 	@property
+	def format(self):
+		return self.getFormat()
+	
+	@format.setter
+	def format(self,lFormat):
+		return self.setFormat(lFormat)
+
+	@property
 	def timeBase(self):
 		return self.getTimeBase()
 
