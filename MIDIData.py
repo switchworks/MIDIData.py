@@ -1,10 +1,16 @@
+# -*- coding: utf-8 -*-
 import sys
 import os
 from ctypes import *
 from struct import *
+
 if not os.path.isfile('./MIDIData.dll'):
 	sys.exit(1)
-MIDIDataDLL = windll.LoadLibrary('./MIDIData.dll')
+try:
+    MIDIDataDLL = windll.LoadLibrary('./MIDIData.dll')
+except OSError as e:
+    print(f"Error loading library: {e}")
+    sys.exit(1)
 
 MIDIDATA_FORMAT0 = 0x00 # フォーマット0
 MIDIDATA_FORMAT1 = 0x01 # フォーマット1
@@ -2384,7 +2390,11 @@ class MIDIData():
 			@property
 			def kind(self):
 				return self.getKind()
-			
+
+			@property
+			def len(self):
+				return self.getLen()
+
 			@property
 			def tempo(self):
 				return self.getTempo()
