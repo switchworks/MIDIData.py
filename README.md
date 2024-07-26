@@ -76,6 +76,7 @@ i.getFirstTrack().getFirstEvent().kind
 | MIDITrack.foreColor		| O		| O		|
 | MIDITrack.backColor		| O		| O		|
 | MIDIEvent.kind			| O		| X		|
+| MIDIEvent.len			| O		| X		|
 | MIDIEvent.tempo			| O		| O		|
 | MIDIEvent.channel			| O		| O		|
 | MIDIEvent.time			| O		| O		|
